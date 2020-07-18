@@ -26,18 +26,25 @@ jobs:
     - name: Run a one-line script
       run: |
         echo "ENVIRON"
-        printenv
-        echo
+        printenv | sort
         echo
         echo "PWD"
         pwd
-        echo
         echo
         echo "DIR LISTING"
         ls -lah
         echo ".. LISTING"
         ls -lah ..
         echo
-        echo
         echo "HOME LISTING"
         ls -lah ~
+        echo
+        echo "git branch -v"
+        git branch -v
+        echo
+        echo "git remote -v"
+        git remote -v
+        echo
+        echo "git log"
+        echo
+        git log | cat
